@@ -6,7 +6,7 @@ from datetime import datetime
 app = Flask(__name__)
 app.secret_key = 'student_mgmt_2026_secret'
 
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient('mongodb+srv://dipeshyadav09086_db_user:<db_password>@cluster0.7vidk0m.mongodb.net/?appName=Cluster0')
 db = client.student_management
 students = db.students
 admins = db.admins
@@ -93,3 +93,4 @@ import os
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
